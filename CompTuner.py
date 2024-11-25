@@ -49,7 +49,7 @@ def get_objective_score(independent, k_iter, SOURCE_PATH, GCC_PATH, INCLUDE_PATH
     execute_terminal_command(cmd4)
     time_c = time_end - time_start   #time opt
     time_o3 = time.time()
-    command = f"{GCC_PATH} -O3 {opt} -c {INCLUDE_PATH} {SOURCE_PATH}/*.c"
+    command = f"{GCC_PATH} -O3 -c {INCLUDE_PATH} {SOURCE_PATH}/*.c"
     execute_terminal_command(command)
     command2 = f"{GCC_PATH} -o a.out -O3 -lm *.o"
     execute_terminal_command(command2)
